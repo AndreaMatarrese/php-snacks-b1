@@ -13,12 +13,6 @@
     </div>
     <div class="snack2">
         <?php 
-        $name = 
-        // ( (strlen($_GET['name']) < 3)) ? $_GET['name'] : 'Nome troppo breve' ;
-
-        if((isset($_GET['name'])) && (strlen($_GET['name']) < 3)){
-            $name =
-        }
         $age = isset($_GET['age']) ? $_GET['age'] : '' ;
         $email = isset($_GET['email']) ? $_GET['email'] : '';
         ?>
