@@ -1,6 +1,6 @@
 <!-- ## Snack 1
 Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con questo schema.
-Olimpia Milano - Cantù | 55-60 -->
+Olimpia Milano - Cantù | 55-60 */ -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,22 +12,51 @@ Olimpia Milano - Cantù | 55-60 -->
     <body>
     <div class="snack1">
     <?php 
-        $arr_match= [
-            houseTeam => [
-                points => 55,
-                name => 'Olimpia',
+        $arr_match=  [
+            [
+                "houseTeam" => [
+                    "points" => 55,
+                    "name" => 'Olimpia Milano',
+                ],
+                "hostTeam" => [
+                    "points" => 15,
+                    "name" => 'Cantù',
+                ]
             ],
-            hostTeam => [
-                points => 55,
-                name => 'Olimpia',
+            [
+                "houseTeam" => [
+                    "points" => 75,
+                    "name" => 'Napoli',
+                ],
+                "hostTeam" => [
+                    "points" => 40,
+                    "name" => 'Catanzaro',
+                ]
+            ],
+            [
+                "houseTeam" => [
+                    "points" => 90,
+                    "name" => 'HappyCasa Brindisi',
+                ],
+                "hostTeam" => [
+                    "points" => 50,
+                    "name" => 'Torino',
+                ]
             ]
         ];
         
-        //  for ($i;$i<2;$i++){
-        //         echo $arr_match=["houseTeam"];
-        //      }
-    ?>
+        ?>
     <h2>Snack 1</h2>
+    <ul><?php
+        $arr_match_len =count($arr_match);
+        for($i=0;$i<$arr_match_len;$i++){
+            $match = $arr_match[$i];
+            echo '<li>'. $match['houseTeam']['name'] . ' - ' . $match['hostTeam']['name'] . ' | '
+            . $match['houseTeam']['points'] . ' - ' . $match['hostTeam']['points'] .'</li>';
+        }
+    ?>
+
+    </ul>
     </div>
 </body>
 <style>
