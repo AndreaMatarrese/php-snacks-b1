@@ -1,5 +1,5 @@
 <!-- ## Snack 4 -->
-<!-- Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta --> -->
+<!-- Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,18 +12,17 @@
     <body>
     <div class="snack4">
         <h2>Snack 4</h2>
-        <?= $numbers?>
         <?php 
-            
-            
-            for ($i=0; $i<15; $i++) {
+            $arr_random = [];
+            while (count($arr_random) < 15){
                 $numbers= rand(1,100);
-                if(!in_array($numbers,$randomN)){
-                    $randomN[]= $numbers;
+                if(!in_array($numbers,$arr_random)){
+                    $arr_random[] = $numbers;
                 }
-            }
-            echo '<pre>'. $numbers . '</pre>';
+            }      
+            var_dump($arr_random)      
         ?>
+        
     </div>
         
 </body>
